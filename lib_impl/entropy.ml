@@ -45,7 +45,6 @@ module Cpu_native = struct
 end
 
 open Lwt.Infix
-open Mirage_OS
 
 type 'a io   = 'a Lwt.t
 type buffer  = Cstruct.t

@@ -1,0 +1,14 @@
+(library
+  (name        mirage_entropy_xen)
+  (public_name mirage-entropy-xen)
+  (libraries   lwt cstruct mirage-xen)
+  (implements mirage-entropy)
+  (c_names     entropy_cpu_stubs)
+  (c_flags     (:include cflags.sexp) -O3 -std=c99 -Wall -Wpedantic
+  ) 
+)
+
+(rule (copy# ../entropy_cpu_stubs.c entropy_cpu_stubs.c))
+(rule (copy# ../entropy.ml entropy.ml))
+
+(rule (with-stdout-to cflags.sexp (run ./cflags.sh)))

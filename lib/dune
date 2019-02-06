@@ -1,0 +1,8 @@
+(library
+ (name        mirage_entropy)
+ (public_name mirage-entropy)
+ (libraries   lwt cstruct)
+ (virtual_modules entropy)
+ (wrapped false)
+  
+)
