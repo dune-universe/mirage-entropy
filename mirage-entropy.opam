@@ -10,13 +10,10 @@ license:      "BSD2"
 
 build: [ "dune" "build" "-p" "mirage-entropy"]
 depends: [
-  "dune" {build}
+  "dune" {build & >= "1.7"}
   "ocaml" {>= "4.04.2"}
-  "cstruct"
+  "cstruct" {>="1.4.0"}
   "lwt"
-]
-conflicts: [
-  "cstruct" {<"1.4.0"}
 ]
 tags: [ "org:mirage"]
 available: [

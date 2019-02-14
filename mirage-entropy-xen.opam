@@ -10,22 +10,18 @@ license:      "BSD2"
 
 build: [ "dune" "build" "-p" "mirage-entropy-xen"]
 depends: [
-  "dune" {build}
+  "dune" {build & >= "1.7"}
   "ocaml" {>= "4.04.2"}
-  "cstruct"
-  "mirage-xen"
+  "cstruct" {>= "1.4.0"}
+  "mirage-xen" {>= "2.2.0"}
   "mirage-entropy"
   "lwt"
-]
-conflicts: [
-  "cstruct" {<"1.4.0"}
-  "mirage-xen" {<"2.2.0"}
 ]
 tags: [ "org:mirage"]
 available: [
   arch = "arm" | arch = "x86_32" | arch = "x86_64" | arch = "arm64"
 ]
-synopsis: "Entropy source for MirageOS unikernels"
+synopsis: "Mirage entropy implementation for Xen"
 description: """
 mirage-entropy implements various entropy sources for MirageOS unikernels:
 - timer based ones (see [whirlwind RNG paper](https://www.ieee-security.org/TC/SP2014/papers/Not-So-RandomNumbersinVirtualizedLinuxandtheWhirlwindRNG.pdf))

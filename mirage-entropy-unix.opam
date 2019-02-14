@@ -10,21 +10,18 @@ license:      "BSD2"
 
 build: [ "dune" "build" "-p" "mirage-entropy-unix"]
 depends: [
-  "dune" {build}
+  "dune" {build & >= "1.7"}
   "ocaml" {>= "4.04.2"}
-  "cstruct"
+  "cstruct" {>= "1.4.0"}
   "lwt"
   "mirage-entropy"
   "mirage-unix"
-]
-conflicts: [
-  "cstruct" {<"1.4.0"}
 ]
 tags: [ "org:mirage"]
 available: [
   arch = "arm" | arch = "x86_32" | arch = "x86_64" | arch = "arm64"
 ]
-synopsis: "Entropy source for MirageOS unikernels"
+synopsis: "Mirage entropy implementation for Unix"
 description: """
 mirage-entropy implements various entropy sources for MirageOS unikernels:
 - timer based ones (see [whirlwind RNG paper](https://www.ieee-security.org/TC/SP2014/papers/Not-So-RandomNumbersinVirtualizedLinuxandtheWhirlwindRNG.pdf))
