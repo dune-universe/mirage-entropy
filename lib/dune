@@ -4,5 +4,5 @@
  (libraries   lwt cstruct)
  (virtual_modules entropy)
  (wrapped false)
-  
+ (default_implementation mirage-entropy.unix)
 )

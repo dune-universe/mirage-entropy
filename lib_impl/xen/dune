@@ -4,6 +4,7 @@
   (libraries   lwt cstruct mirage-xen)
   (implements mirage-entropy)
   (c_names     entropy_cpu_stubs)
+  (variant     xen)
   (optional)
   (c_flags     (:include cflags.sexp) (:include custom_flags) -O3 -std=c99 -Wall -Wpedantic
   )

@@ -3,6 +3,7 @@
   (public_name mirage-entropy.unix)
   (libraries   lwt cstruct mirage-unix)
   (implements  mirage-entropy)
+  (variant     unix)
   (optional)
   (c_names     entropy_cpu_stubs)
   (c_flags     (:include cflags.sexp) -O3 -std=c99 -Wall -Wpedantic
