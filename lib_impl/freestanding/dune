@@ -1,9 +1,10 @@
 (library
   (name        mirage_entropy_freestanding)
-  (public_name mirage-entropy-freestanding)
+  (public_name mirage-entropy.freestanding)
   (libraries   lwt cstruct mirage-solo5 ocaml-freestanding)
   (implements mirage-entropy)
   (c_names     entropy_cpu_stubs)
+  (optional)
   (c_flags     (:include cflags.sexp) (:include custom_flags) -O3 -std=c99 -Wall -Wpedantic
   )
 )
