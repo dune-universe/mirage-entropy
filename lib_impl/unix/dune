@@ -1,6 +1,6 @@
 (library
   (name        mirage_entropy_unix)
-  (public_name mirage-entropy.unix)
+  (public_name mirage-entropy-unix)
   (libraries   lwt cstruct mirage-unix)
   (implements  mirage-entropy)
   (variant     unix)

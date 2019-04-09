@@ -1,8 +1,8 @@
 (library
   (name        mirage_entropy_xen)
-  (public_name mirage-entropy.xen)
+  (public_name mirage-entropy-xen)
   (libraries   lwt cstruct mirage-xen)
-  (implements mirage-entropy)
+  (implements  mirage-entropy)
   (c_names     entropy_cpu_stubs)
   (variant     xen)
   (optional)

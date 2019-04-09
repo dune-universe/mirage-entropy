@@ -10,7 +10,7 @@ license:      "BSD2"
 
 build: [ "dune" "build" "-p" "mirage-entropy-unix"]
 depends: [
-  "dune" {build & >= "1.7"}
+  "dune" {build & >= "1.9"}
   "ocaml" {>= "4.04.2"}
   "cstruct" {>= "1.4.0"}
   "lwt"

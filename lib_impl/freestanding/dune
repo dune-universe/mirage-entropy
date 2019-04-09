@@ -1,6 +1,6 @@
 (library
   (name        mirage_entropy_freestanding)
-  (public_name mirage-entropy.freestanding)
+  (public_name mirage-entropy-freestanding)
   (libraries   lwt cstruct mirage-solo5 ocaml-freestanding)
   (implements  mirage-entropy)
   (variant     freestanding)
